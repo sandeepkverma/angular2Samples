@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
     <li> <a routerLink="slidercomponent" routerLinkActive="active">slider component</a></li>
     <li> <a routerLink="tabscomponent" routerLinkActive="active">tabs component</a></li>
     <li> <a routerLink="popupcomponent" routerLinkActive="active">popup component</a></li>
+    <li> <a routerLink="paginationcomponent" routerLinkActive="active">pagination component</a></li>
 
     </ul>
     </nav>

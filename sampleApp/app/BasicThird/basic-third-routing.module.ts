@@ -8,6 +8,7 @@ import { TableComponent } from './table.component';
 import { SliderComponent } from './slider.component';
 import { TabsComponent } from './tabs.component';
 import { PopupComponent } from './popups.component';
+import { PaginationComponent } from './pagination.component';
 
 const componentRouting:Routes = [   
     { path : 'basiccomponent' ,component:BasicComponent, children:[
@@ -29,6 +30,9 @@ const componentRouting:Routes = [
         },
         {
             path:'popupcomponent' , component:PopupComponent
+        },
+        {
+            path:'paginationcomponent' , component:PaginationComponent
         }
         ]
     }

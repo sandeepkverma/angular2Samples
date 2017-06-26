@@ -10,13 +10,15 @@ import { TableComponent } from './table.component';
 import { SliderComponent } from './slider.component';
 import { TabsComponent } from './tabs.component';
 import { PopupComponent } from './popups.component';
+import { PaginationComponent } from './pagination.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 
 @NgModule({
     imports:[CommonModule,FormsModule,BasicThirdRoutingModule],
     declarations:[BasicComponent,SelectComponent,TableComponent
-    ,SliderComponent,TabsComponent,PopupComponent]
+    ,SliderComponent,TabsComponent,PopupComponent,PaginationComponent]
 })
 
 export class BasicThirdModule { }

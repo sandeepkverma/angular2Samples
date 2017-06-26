@@ -5,6 +5,11 @@ import { DataBindingComponent } from './databinding.component';
 import { CoreConceptComponent } from './coreconcepts.component';
 import { HelloWorldComponent } from './helloworld.component';
 import { DirectiveSampleComponent } from './directive-sample.component';
+import { NgIfDirectiveComponent } from './ngif-directive.component';
+import { NavigationComponent } from './navigation.component';
+import { FormsComponent } from './forms.component';
+import { DependencyInjectionComponent } from './dependencyinj.component';
+
 
 
 
@@ -24,6 +29,18 @@ const coreConceptsRouting:Routes = [
             },
             {
                 path:'directivesample', component:DirectiveSampleComponent
+            },
+            {
+                path:'ngifdirective' , component:NgIfDirectiveComponent
+            },
+            {
+                path:'navigation', component:NavigationComponent
+            },
+            {
+                path:'formscomponent' ,component:FormsComponent
+            },
+            {
+                path:'dependencyinj' , component:DependencyInjectionComponent
             }
             
 
