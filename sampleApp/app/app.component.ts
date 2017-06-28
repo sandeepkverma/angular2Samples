@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
     <li> <a routerLink="/basiccomponent" routerLinkActive="active">Basic third </a></li>
     <li> <a routerLink="/asysdata" routerLinkActive="active">AsysData</a></li>
     <li> <a routerLink="/coreconcept" routerLinkActive="active">Core Concept</a></li> 
+    <li> <a routerLink="/plugins" routerLinkActive="active">Plugins</a></li> 
     </ul>
     <router-outlet></router-outlet> 
     `

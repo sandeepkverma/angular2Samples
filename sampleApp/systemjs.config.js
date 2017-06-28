@@ -55,7 +55,8 @@
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
       'ts':                        'npm:plugin-typescript@5.2.7/lib/plugin.js',
       'typescript':                'npm:typescript@2.2.1/lib/typescript.js',
-      'ng2-pagination':             ''
+      // 'ngx-pagination':             'https://npmcdn.com/ngx-pagination'
+      'ngx-pagination':             'npm:ngx-pagination/dist/ngx-pagination.umd.js'
 
     },
     // packages tells the System loader how to load when no filename and/or no extension
@@ -71,7 +72,9 @@
       },
       rxjs: {
         defaultExtension: 'js'
-      }
+      },
+
+     'ngx-pagination':{ defaultExtension: 'js' }
     }
   });
 

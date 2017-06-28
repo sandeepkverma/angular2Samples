@@ -16,7 +16,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
-    imports:[CommonModule,FormsModule,BasicThirdRoutingModule],
+    imports:[CommonModule,FormsModule,NgxPaginationModule,BasicThirdRoutingModule],
+    
     declarations:[BasicComponent,SelectComponent,TableComponent
     ,SliderComponent,TabsComponent,PopupComponent,PaginationComponent]
 })
