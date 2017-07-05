@@ -9,6 +9,8 @@ import { NgIfDirectiveComponent } from './ngif-directive.component';
 import { NavigationComponent } from './navigation.component';
 import { FormsComponent } from './forms.component';
 import { DependencyInjectionComponent } from './dependencyinj.component';
+import { EventHandlingComponent } from './eventhandling.component';
+import { FilterComponent } from './filter.component';
 
 
 
@@ -41,10 +43,16 @@ const coreConceptsRouting:Routes = [
             },
             {
                 path:'dependencyinj' , component:DependencyInjectionComponent
+            },
+            {
+                path:'eventhandling', component:EventHandlingComponent
+            },
+            {
+                path:'filters', component:FilterComponent
             }
             
 
-        ]
+        ] 
     }
 ]
 

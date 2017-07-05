@@ -13,12 +13,16 @@ import { NgIfDirectiveComponent } from './ngif-directive.component';
 import { NavigationComponent } from './navigation.component';
 import { FormsComponent } from './forms.component';
 import { DependencyInjectionComponent } from './dependencyinj.component';
+import { EventHandlingComponent } from './eventhandling.component';
+import { FilterComponent } from './filter.component';
+import { MultiplierPipe } from './custom.pipe';
 
 @NgModule({
     imports:[CommonModule,FormsModule,CoreConceptsRoutingModule],
     declarations:[DataBindingComponent,CoreConceptComponent,HelloWorldComponent, 
     DirectiveComponent, DirectiveSampleComponent,NgIfDirectiveComponent,NavigationComponent,
-    FormsComponent, DependencyInjectionComponent]
+    FormsComponent, DependencyInjectionComponent,EventHandlingComponent,FilterComponent,
+    MultiplierPipe]
 })
 
 
