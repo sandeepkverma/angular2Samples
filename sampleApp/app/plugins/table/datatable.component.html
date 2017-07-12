@@ -1,0 +1,17 @@
+<input type="text" class="form-control" *ngIf=enableFilter [(ngModel)]=query 
+         (keyup)=filter() placeholder="Filter" />
+<table>
+    <thead>
+           <tr>
+                <th  *ngFor="let column of columns" (click)="sort(column.value)">{{column.header}}
+                 <span [class.sortorder]="propertyName == column.value" [class.reverse]="reverse"></span>   
+                </th>
+                
+            </tr> 
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of getData()">
+            <td *ngFor="let column of columns">{{row[column.value]}}</td>
+        </tr>
+    </tbody>
+</table>

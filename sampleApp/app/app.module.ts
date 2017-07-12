@@ -7,12 +7,12 @@ import { AsysDataComponent } from '../app/AsyscData/asysdata.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BasicThirdModule } from '../app/BasicThird/basicthird.module';
 import { CoreConceptsModule } from '../app/CoreConcepts/coreconcepts.module';
-import { PluginComponent } from '../app/plugins/plugnis.component';
+import { PluginsModule } from '../app/plugins/plugins.module';
 
 
 @NgModule({
-    imports:[BrowserModule,FormsModule,BasicThirdModule,CoreConceptsModule,AppRoutingModule],
-    declarations:[AppComponent,AsysDataComponent,PluginComponent],
+    imports:[BrowserModule,FormsModule,BasicThirdModule,CoreConceptsModule,PluginsModule,AppRoutingModule],
+    declarations:[AppComponent,AsysDataComponent],
     bootstrap:[AppComponent]
 })
  

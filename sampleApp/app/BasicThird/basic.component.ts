@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
     selector:'basic-components',
     template:`
     <nav>
-    <ul>
+    <ul class="nav">
     <li> <a routerLink="selectcomponent" routerLinkActive="active">select component</a></li>
     <li> <a routerLink="tablecomponent" routerLinkActive="active">table component</a></li>
     <li> <a routerLink="slidercomponent" routerLinkActive="active">slider component</a></li>

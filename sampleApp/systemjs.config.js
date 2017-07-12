@@ -56,7 +56,9 @@
       'ts':                        'npm:plugin-typescript@5.2.7/lib/plugin.js',
       'typescript':                'npm:typescript@2.2.1/lib/typescript.js',
       // 'ngx-pagination':             'https://npmcdn.com/ngx-pagination'
-      'ngx-pagination':             'npm:ngx-pagination/dist/ngx-pagination.umd.js'
+      'ngx-pagination':             'npm:ngx-pagination/dist/ngx-pagination.umd.js',
+      'angular2-select':            'npm:angular2-select',
+      'angular2-fontawesome':       'npm:angular2-fontawesome'
 
     },
     // packages tells the System loader how to load when no filename and/or no extension
@@ -74,7 +76,12 @@
         defaultExtension: 'js'
       },
 
-     'ngx-pagination':{ defaultExtension: 'js' }
+     'ngx-pagination':{ defaultExtension: 'js' },
+     'angular2-select': {
+	  	main: 'index.js',
+		  defaultExtension: 'js'
+	    } ,
+      'angular2-fontawesome': { defaultExtension: 'js' }
     }
   });
 

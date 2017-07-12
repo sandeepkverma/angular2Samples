@@ -12,11 +12,12 @@ import { TabsComponent } from './tabs.component';
 import { PopupComponent } from './popups.component';
 import { PaginationComponent } from './pagination.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import {SelectModule} from 'angular2-select';
 
 
 
 @NgModule({
-    imports:[CommonModule,FormsModule,NgxPaginationModule,BasicThirdRoutingModule],
+    imports:[CommonModule,FormsModule,NgxPaginationModule,SelectModule,BasicThirdRoutingModule],
     
     declarations:[BasicComponent,SelectComponent,TableComponent
     ,SliderComponent,TabsComponent,PopupComponent,PaginationComponent]
