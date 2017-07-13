@@ -16,6 +16,7 @@ import {SelectModule} from 'angular2-select';
 
 
 
+
 @NgModule({
     imports:[CommonModule,FormsModule,NgxPaginationModule,SelectModule,BasicThirdRoutingModule],
     

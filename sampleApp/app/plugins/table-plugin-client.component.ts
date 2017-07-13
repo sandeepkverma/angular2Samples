@@ -12,7 +12,6 @@ import { Component } from '@angular/core';
     <column [value]="'age'" [header]="'AGE'">
     </column>
     </datatable>
-
     `
 })
 

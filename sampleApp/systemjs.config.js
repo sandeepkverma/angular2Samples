@@ -58,7 +58,11 @@
       // 'ngx-pagination':             'https://npmcdn.com/ngx-pagination'
       'ngx-pagination':             'npm:ngx-pagination/dist/ngx-pagination.umd.js',
       'angular2-select':            'npm:angular2-select',
-      'angular2-fontawesome':       'npm:angular2-fontawesome'
+      'angular2-fontawesome':       'npm:angular2-fontawesome',
+      'ngx-super-table':            'node_modules/ngx-super-table/index.js'   
+      // 'jquery':                     'npm:jquery/dist/jquery.min.js',
+      // 'materializejs':                'npm:materialize-css/dist/js/materialize.min.js'
+      // 'materializecss':               'npm:materialize-css/dist/css/materialize.min.css',
 
     },
     // packages tells the System loader how to load when no filename and/or no extension
@@ -82,6 +86,7 @@
 		  defaultExtension: 'js'
 	    } ,
       'angular2-fontawesome': { defaultExtension: 'js' }
+      // 'materializejs': { defaultExtension: 'js' },
     }
   });
 

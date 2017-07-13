@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PluginComponent } from './plugins.component';
 import { TablePluginClientComponent } from './table-plugin-client.component';
+import { AutocompletePluginClientComponent } from './autocomplete-client.component';
+
 
 
 const pluginsRouting:Routes = [   
@@ -14,6 +16,9 @@ const pluginsRouting:Routes = [
         },
         {
             path:'tableplugincomponent', component:TablePluginClientComponent
+        },
+        {
+            path:'autocompleteplugincomponent' ,component:AutocompletePluginClientComponent
         }
         ]
     }
