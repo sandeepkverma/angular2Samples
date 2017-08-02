@@ -10,13 +10,17 @@ import { ColumnComponent } from './table/column.component';
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
 import { AutocompletePluginClientComponent } from './autocomplete-client.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { TabPluginClientComponent } from './tab-plugin-client.component';
+import { TabsComponent } from './tab/tabs.component';
+import { TabComponent } from './tab/tab.component';
+
 
 
 
 @NgModule({
 
     imports:[CommonModule,FormsModule,Angular2FontawesomeModule,PluginsRoutingModule],
-    declarations:[PluginComponent,TablePluginClientComponent,DataTableComponent,ColumnComponent,AutocompletePluginClientComponent,AutocompleteComponent]
+    declarations:[PluginComponent,TablePluginClientComponent,DataTableComponent,ColumnComponent,AutocompletePluginClientComponent,AutocompleteComponent,TabPluginClientComponent,TabsComponent,TabComponent]
 })
 
 

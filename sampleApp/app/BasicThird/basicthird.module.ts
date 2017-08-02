@@ -13,6 +13,7 @@ import { PopupComponent } from './popups.component';
 import { PaginationComponent } from './pagination.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {SelectModule} from 'angular2-select';
+// import { Ng2SmartTableModule } from 'ng2-smart-table'
 
 
 

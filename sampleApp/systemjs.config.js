@@ -59,7 +59,9 @@
       'ngx-pagination':             'npm:ngx-pagination/dist/ngx-pagination.umd.js',
       'angular2-select':            'npm:angular2-select',
       'angular2-fontawesome':       'npm:angular2-fontawesome',
-      'ngx-super-table':            'node_modules/ngx-super-table/index.js'   
+      // 'ng2-smart-table':            'node_modules/ng2-smart-table/index.js'   
+      // 'ng2-completer':              'node_modules/ng2-completer/index.js',
+      // 'lodash':              'node_modules/lodash'
       // 'jquery':                     'npm:jquery/dist/jquery.min.js',
       // 'materializejs':                'npm:materialize-css/dist/js/materialize.min.js'
       // 'materializecss':               'npm:materialize-css/dist/css/materialize.min.css',
@@ -85,8 +87,11 @@
 	  	main: 'index.js',
 		  defaultExtension: 'js'
 	    } ,
-      'angular2-fontawesome': { defaultExtension: 'js' }
-      // 'materializejs': { defaultExtension: 'js' },
+      'angular2-fontawesome': { defaultExtension: 'js' },
+    //   'ng2-smart-table': {
+    //   // main: 'bundles/table.umd.js',
+    //   defaultJSExtension: 'js'
+    // }
     }
   });
 
