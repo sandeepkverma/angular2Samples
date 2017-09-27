@@ -1,0 +1,21 @@
+.nav-card{
+        list-style-type: none;
+    cursor: pointer;
+    border: 1px solid gray;
+    padding: 5px;
+    display: inline;
+    background-color: lightblue;
+    text-decoration: none;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.nav-card:hover{
+    background-color: blanchedalmond;
+}
+
+.active{
+    background-color: lightseagreen;
+}
