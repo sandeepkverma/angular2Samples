@@ -15,4 +15,4 @@ import { Component } from '@angular/core';
 
 export class AppComponent { 
     name:string = 'sandeep';
-}
+}   

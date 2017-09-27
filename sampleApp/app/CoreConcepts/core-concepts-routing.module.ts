@@ -11,6 +11,13 @@ import { FormsComponent } from './forms.component';
 import { DependencyInjectionComponent } from './dependencyinj.component';
 import { EventHandlingComponent } from './eventhandling.component';
 import { FilterComponent } from './filter.component';
+import { LifecycleComponent } from './lifecycle.component';
+import { AttributeComponent } from './attribute.component';
+import { StructuralComponent } from './structural.component';
+import { PipeComponent } from './pipe.component';
+
+
+
 
 
 
@@ -49,6 +56,18 @@ const coreConceptsRouting:Routes = [
             },
             {
                 path:'filters', component:FilterComponent
+            },
+            {
+                path:'lifecycle' , component:LifecycleComponent
+            },
+            {
+                path:'attributecomponent', component:AttributeComponent
+            },
+            {
+                path:'structuralcomponent' , component:StructuralComponent
+            },
+            {
+                path:'pipecomponent' , component:PipeComponent
             }
             
 

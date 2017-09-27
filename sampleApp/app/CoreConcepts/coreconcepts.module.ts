@@ -16,13 +16,21 @@ import { DependencyInjectionComponent } from './dependencyinj.component';
 import { EventHandlingComponent } from './eventhandling.component';
 import { FilterComponent } from './filter.component';
 import { MultiplierPipe } from './custom.pipe';
+import {LifecycleComponent} from './lifecycle.component';
+import { AttributeComponent } from './attribute.component';
+import { AttributeDirective } from './attribute.directive';
+import { StructuralComponent } from './structural.component';
+import { UnlessDirective } from './structural.directive';
+import { PipeComponent } from './pipe.component';
+import { CustomDatePipe } from './customdate.pipe';
 
 @NgModule({
     imports:[CommonModule,FormsModule,CoreConceptsRoutingModule],
     declarations:[DataBindingComponent,CoreConceptComponent,HelloWorldComponent, 
     DirectiveComponent, DirectiveSampleComponent,NgIfDirectiveComponent,NavigationComponent,
     FormsComponent, DependencyInjectionComponent,EventHandlingComponent,FilterComponent,
-    MultiplierPipe]
+    MultiplierPipe,LifecycleComponent,AttributeComponent,AttributeDirective,StructuralComponent,UnlessDirective
+    ,PipeComponent,CustomDatePipe]
 })
 
 
