@@ -36,6 +36,23 @@ export class AccountService {
 
     private createAccountFailure(error: Response) {
         console.error(error);
-        return Observable.throw(error.json().error());
+        return Observable.throw(error.json());
+    }
+
+    updateAccount(accountInfo){
+        let url = Constants.BASEURL+"/updateAccount";
+        let params = new URLSearchParams();
+        params.append("id",accountInfo.id);
+        params.append("name",accountInfo.name);
+        params.append("description",accountInfo.description);
+
+        return this.http.post(url,params).map((response:Response) => <any> response.json()).do(data=>JSON.stringify(data)).catch(this.updateAccountFailure);
+
+    }
+
+    updateAccountFailure(error:Response){
+        console.error(error);
+        return Observable.throw(error.json());
+        
     }
 } 

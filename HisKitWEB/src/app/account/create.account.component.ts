@@ -51,6 +51,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 
 
 export class CreateAccountComponent {
+    id:string;
     name: string;
     description: string;
 
@@ -59,7 +60,14 @@ export class CreateAccountComponent {
 
     createAccountCompleted() {
        
-        this.createAccount.emit({ name: this.name, description: this.description });
+        this.createAccount.emit({ id:this.id,name: this.name, description: this.description });
+    }
+
+    resetForm(){
+        this.id = null;
+        this.name=null;
+        this.description = null;
+
     }
 
 
