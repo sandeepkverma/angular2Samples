@@ -40,7 +40,7 @@ export class AccountService {
     }
 
     updateAccount(accountInfo){
-        let url = Constants.BASEURL+"/updateAccount";
+        let url = Constants.BASEURL+"updateAccount";
         let params = new URLSearchParams();
         params.append("id",accountInfo.id);
         params.append("name",accountInfo.name);
@@ -54,5 +54,18 @@ export class AccountService {
         console.error(error);
         return Observable.throw(error.json());
         
+    }
+
+    deleteAccount(id){
+        let url = Constants.BASEURL+"deleteAccount";
+        let params = new URLSearchParams();
+        params.append("id",id);
+
+        return this.http.post(url,params).map((response:Response) => <any> response.json()).do(data=>JSON.stringify(data)).catch(this.deleteAccountFailure);
+    }
+
+    deleteAccountFailure(error:Response){
+        console.error(error);
+        return Observable.throw(error.json());
     }
 } 

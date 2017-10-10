@@ -19,19 +19,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">His Kit</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <!--<li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>-->
-            </ul>
-
-        </div>
-    </nav>
+    <header></header>
     <div class="container">
         <div *ngIf="accounts?.length==0" class="jumbotron">
             <h1 class="align-center">No Accounts....</h1>
@@ -49,7 +37,7 @@
             <div class="accountlist">
             
                 <ul class="wm-list clearfix">
-                    <li class="pointer" *ngFor="let account of accounts">
+                    <li class="pointer" *ngFor="let account of accounts" (click)="gotoAccountDetails(account)" title="click to go for account details">
                         <div class="wm-list-lf">
                             {{account.name}}
                         </div>
@@ -57,7 +45,7 @@
                             <a href="#" title="Edit" (click)="updateAccount(account)">
     					<i class="fa fa-pencil-square-o"></i>
     				</a>
-                            <a href="#" title="Delete">
+                            <a href="#" title="Delete" (click)="deleteAccount(account)">
     					<i class="fa fa-trash"></i>
     				</a>
                         </div>

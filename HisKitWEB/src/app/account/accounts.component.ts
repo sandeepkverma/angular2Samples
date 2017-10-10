@@ -1,4 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { AccountService } from './account.service';
 import { CreateAccountComponent } from './create.account.component';
 
@@ -15,7 +17,7 @@ export class AccountComponent {
 
     @ViewChild(CreateAccountComponent) createAccountComponent: CreateAccountComponent;
 
-    constructor(private accountService: AccountService) { }
+    constructor(private accountService: AccountService,private router:Router) { }
 
     title: string = 'this is account';
     accounts: any;
@@ -53,6 +55,20 @@ export class AccountComponent {
         this.createAccountComponent.name = accountInfo.name;
         this.createAccountComponent.description = accountInfo.description;
         $("#createaccount").modal("show");
+    }
+
+    deleteAccount(accountInfo){
+        var flag = confirm("are you sure to delete an account \'"+accountInfo.name+"\'");
+        if(flag){ 
+        this.accountService.deleteAccount(accountInfo.id).subscribe(data=>{
+            alert("account deleted successfully.");
+              this.getAccount();
+        });
+        }
+    }
+
+    gotoAccountDetails(accountInfo){
+        this.router.navigate(["/accountDetails",accountInfo.id]);
     }
 
     reset() {
