@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { CreateAccountComponent } from './account/create.account.component';
 import { AccountDetailsComponent } from './account/accountdetails.component';
 import { HeaderComponent } from './header.component';
+import { TimestampToDatePipe } from './timestamp-to-date.pipe';
 
 
 
@@ -22,7 +23,8 @@ import { HeaderComponent } from './header.component';
     LoginComponent,
     CreateAccountComponent,
     AccountDetailsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TimestampToDatePipe
   ],
   imports: [
     BrowserModule,

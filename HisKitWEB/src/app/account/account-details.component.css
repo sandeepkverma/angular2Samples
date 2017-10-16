@@ -4,3 +4,12 @@
  height: 100%;
  padding: 15px 20px 15px 20px;
 }
+
+.add-invoice-container{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.ignoreInvoice td:not(:last-child){
+text-decoration: line-through;
+}

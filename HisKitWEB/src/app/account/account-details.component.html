@@ -1,8 +1,38 @@
  <header></header>
-<a class="pointer"><i class="fa fa-home">Go Back</i></a>
+<a class="pointer" (click)="gotoBack()"><i class="fa fa-home">Go Back</i></a>
 
 <div class="account-details-container">
-<div>account details component</div>
+<div class="add-invoice-container">
+    <form class="form-horizontal">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Name:</label>
+    <div class="col-sm-10">
+      <input type="name" [(ngModel)]="accountDetails.name" class="form-control" name="name" placeholder="Enter item name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="description">Description:</label>
+    <div class="col-sm-10"> 
+      <input type="text" [(ngModel)]="accountDetails.description" class="form-control" name="description" placeholder="Enter description">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="amount">Amount:</label>
+    <div class="col-sm-10"> 
+      <input type="text" [(ngModel)]="accountDetails.amount" class="form-control" name="amount" placeholder="Enter amount">
+    </div>
+  </div>
+ 
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="button" (click)="createInvoice()" class="btn btn-default">Submit</button>
+      <button type="button" (click)="resetInvoiceForm()" class="btn btn-default">Cancel</button>
+    </div>
+  </div>
+</form>
+
+</div>
+<div class="show-invoices-container">
 <table class="table">
     <thead>
         <tr>
@@ -14,16 +44,24 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <!--<tr>
             <td>Sugar</td>  
             <td>1 kg sugar</td>
             <td>50</td>
             <td>10/10/2017 5:06</td>
             <td>Edit/Reject</td>
+        </tr>-->
+        <tr *ngFor="let invoice of invoices" [class.ignoreInvoice]="invoice.ignoreFlag">
+            <td>{{invoice.name}}</td>  
+            <td>{{invoice.description}}</td>
+            <td>{{invoice.amount}}</td>
+            <td>{{invoice.creationTime|timestampToDate}}</td>
+            <td><a class="pointer" title="Edit Invoice" (click)="editInvoice(invoice)">Edit</a>/<a class="pointer" (click)="rejectInvoice(invoice)"><span *ngIf="invoice.ignoreFlag">revoke</span><span *ngIf="!invoice.ignoreFlag">reject</span></a></td>
         </tr>
     </tbody>
 </table>
-<div><span class="pull-right">Net Amount: 50 Rs</span></div>
+</div>
+<div><span class="pull-right">Net Amount: {{netAmount}} Rs</span></div>
 </div>
 
 

@@ -17,9 +17,9 @@ export class AccountDetailsService {
         let url = Constants.BASEURL + "createInvoice";
         let headers = new Headers({ 'Content-Type': 'application/json' });
         return this.http.post(url, JSON.stringify(invoiceInfo), { headers: headers })
-        .map((response: Response)=><any> response.json())
-        .do(data=>JSON.stringify(data))
-        .catch(this.createInvoiceFailure);
+            .map((response: Response) => <any>response.json())
+            .do(data => JSON.stringify(data))
+            .catch(this.createInvoiceFailure);
 
     }
     createInvoiceFailure(error: Response) {
@@ -28,26 +28,46 @@ export class AccountDetailsService {
     }
 
     updateInvoice(invoiceInfo) {
-
+        let url = Constants.BASEURL + "updateInvoice";
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        return this.http.post(url, JSON.stringify(invoiceInfo), { headers: headers })
+            .map((response: Response) => <any>response.json())
+            .do(data => JSON.stringify(data))
+            .catch(this.updateInvoiceFailure);
     }
 
     updateInvoiceFailure(error: Response) {
-
+        console.error(error);
+        return Observable.throw(error.json());
     }
 
-    toggleIgnoreInvoice(invoiceId) {
-
+    toggleIgnoreInvoice(invoiceId,ignoreFlag) {
+         let url = Constants.BASEURL + "toggleIgnoreInvoice";
+        let params = new URLSearchParams();
+        params.append("invoiceId",invoiceId);
+        params.append("ignoreFlag",ignoreFlag);
+        return this.http.post(url, params)
+            .map((response: Response) => <any>response.json())
+            .do(data => JSON.stringify(data))
+            .catch(this.toggleIgnoreInvoiceFailure);
     }
 
     toggleIgnoreInvoiceFailure(error: Response) {
-
+        console.error(error);
+        return Observable.throw(error.json());
     }
 
     getInvoices(accountId) {
+        let url = Constants.BASEURL + "getInvoices";
+        let params = new URLSearchParams();
+        params.append("accountId", accountId);
+        return this.http.post(url, params).map((response: Response) => <any>response.json()).do(data => JSON.stringify(data)).catch(this.getInvoicesFailure);
 
     }
 
     getInvoicesFailure(error: Response) {
+        console.error(error);
+        return Observable.throw(error.json());
 
     }
 
