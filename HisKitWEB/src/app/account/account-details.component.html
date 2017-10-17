@@ -39,7 +39,8 @@
             <th>Name</th>
             <th>Description</th>
             <th>Amount(Rs)</th>
-            <th>DateTime</th>
+            <th>Creation DateTime</th>
+            <th>Updation DateTime</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -56,6 +57,7 @@
             <td>{{invoice.description}}</td>
             <td>{{invoice.amount}}</td>
             <td>{{invoice.creationTime|timestampToDate}}</td>
+            <td>{{invoice.updationTime|timestampToDate}}</td>
             <td><a class="pointer" title="Edit Invoice" (click)="editInvoice(invoice)">Edit</a>/<a class="pointer" (click)="rejectInvoice(invoice)"><span *ngIf="invoice.ignoreFlag">revoke</span><span *ngIf="!invoice.ignoreFlag">reject</span></a></td>
         </tr>
     </tbody>
